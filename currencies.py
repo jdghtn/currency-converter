@@ -1,6 +1,10 @@
-import requests
+import requests, os
 
-API_KEY = 'fca_live_oykR5BXJqVmmCyySsTdo8abK2w8PuRi9jFYdUI9P'
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY =  os.getenv('API_KEY')
 BASE_URL = f'https://api.freecurrencyapi.com/v1/latest?apikey={API_KEY}'
 CURRENCIES = ['EUR', 'USD', 'JPY', 'BGN', 'CZK', 'DKK', 'GBP', 'HUF', 'PLN', 'RON', 'SEK', 'CHF', 'ISK', 'NOK', 'HRK', 'RUB', 'TRY', 'AUD', 'BRL', 'CAD', 'CNY', 'HKD', 'IDR', 'ILS', 'INR', 'KRW', 'MXN', 'MYR', 'NZD', 'PHP', 'SGD', 'THB', 'ZAR']
 
